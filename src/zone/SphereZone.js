@@ -1,8 +1,8 @@
 import { PI } from '../constants';
-import Util from '../utils/Util';
 import Vector3D from '../math/Vector3D';
-import Zone from './Zone';
+import Util from '../utils/Util';
 import { ZONE_TYPE_SPHERE as type } from './types';
+import Zone from './Zone';
 
 /**
  * A spherical zone for particles to be emitted within.
@@ -82,19 +82,23 @@ export default class SphereZone extends Zone {
 SphereZone.prototype.getPosition = (function() {
   var tha, phi, r;
 
-  return function() {
-    this.random = Math.random();
+  class v {
+    constructor() {
+      this.random = Math.random();
 
-    r = this.random * this.radius;
-    tha = PI * Math.random(); //[0-pi]
-    phi = PI * 2 * Math.random(); //[0-2pi]
+      r = this.random * this.radius;
+      tha = PI * Math.random(); //[0-pi]
+      phi = PI * 2 * Math.random(); //[0-2pi]
 
-    this.vector.x = this.x + r * Math.sin(tha) * Math.cos(phi);
-    this.vector.y = this.y + r * Math.sin(phi) * Math.sin(tha);
-    this.vector.z = this.z + r * Math.cos(tha);
+      this.vector.x = this.x + r * Math.sin(tha) * Math.cos(phi);
+      this.vector.y = this.y + r * Math.sin(phi) * Math.sin(tha);
+      this.vector.z = this.z + r * Math.cos(tha);
 
-    return this.vector;
-  };
+      return this.vector;
+    }
+  }
+
+  return v;
 })();
 
 SphereZone.prototype._bound = (function() {

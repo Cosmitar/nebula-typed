@@ -166,50 +166,54 @@ export default {
    * @return void
    */
   addInfo: (function() {
-    return function(style) {
-      var self = this;
+    class info {
+      constructor(style) {
+        var self = this;
 
-      if (!this._infoCon) {
-        this._infoCon = document.createElement('div');
-        this._infoCon.style.cssText = [
-          'position:fixed;bottom:0px;left:0;cursor:pointer;',
-          'opacity:0.9;z-index:10000;padding:10px;font-size:12px;',
-          'width:120px;height:50px;background-color:#002;color:#0ff;',
-        ].join('');
+        if (!this._infoCon) {
+          this._infoCon = document.createElement('div');
+          this._infoCon.style.cssText = [
+            'position:fixed;bottom:0px;left:0;cursor:pointer;',
+            'opacity:0.9;z-index:10000;padding:10px;font-size:12px;',
+            'width:120px;height:50px;background-color:#002;color:#0ff;',
+          ].join('');
 
-        this._infoType = 1;
-        this._infoCon.addEventListener(
-          'click',
-          function() {
-            self._infoType++;
-            if (self._infoType > 3) self._infoType = 1;
-          },
-          false
-        );
+          this._infoType = 1;
+          this._infoCon.addEventListener(
+            'click',
+            function() {
+              self._infoType++;
+              if (self._infoType > 3) self._infoType = 1;
+            },
+            false
+          );
 
-        var bg, color;
+          var bg, color;
 
-        switch (style) {
-          case 2:
-            bg = '#201';
-            color = '#f08';
-            break;
+          switch (style) {
+            case 2:
+              bg = '#201';
+              color = '#f08';
+              break;
 
-          case 3:
-            bg = '#020';
-            color = '#0f0';
-            break;
+            case 3:
+              bg = '#020';
+              color = '#0f0';
+              break;
 
-          default:
-            bg = '#002';
-            color = '#0ff';
+            default:
+              bg = '#002';
+              color = '#0ff';
+          }
+
+          this._infoCon.style['background-color'] = bg;
+          this._infoCon.style['color'] = color;
         }
 
-        this._infoCon.style['background-color'] = bg;
-        this._infoCon.style['color'] = color;
+        if (!this._infoCon.parentNode) document.body.appendChild(this._infoCon);
       }
+    }
 
-      if (!this._infoCon.parentNode) document.body.appendChild(this._infoCon);
-    };
+    return info;
   })(),
 };
