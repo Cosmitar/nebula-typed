@@ -42,8 +42,7 @@
     "ci:src": "npm run lint && npm run test && npm run coverage",
     "ci:bundlesize": "./scripts/check-bundlesize",
     "ci:website": "npm run ci --prefix website",
-    "analyze": "webpack-bundle-analyzer build/stats.json",
-    "postinstall": "npm run build"
+    "analyze": "webpack-bundle-analyzer build/stats.json"
   },
   "repository": {
     "type": "git",
