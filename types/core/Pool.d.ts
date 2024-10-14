@@ -13,7 +13,7 @@ export default class Pool {
      * @desc Incrementing id that keeps a count of the number of objects created
      * @type {integer}
      */
-    cID: integer;
+    cID: number;
     /**
      * @desc Map of pools in the format of PUID<String>: pool<Array>
      * @type {object}
@@ -54,7 +54,7 @@ export default class Pool {
      *
      * @return {integer}
      */
-    getCount(): integer;
+    getCount(): number;
     /**
      * Gets an object either by creating a new one or retrieving it from the pool.
      *
@@ -69,7 +69,7 @@ export default class Pool {
      * @param {object} obj - The object to expire
      * @return {integer}
      */
-    expire(obj: object): integer;
+    expire(obj: object): number;
     /**
      * Destroys all pools.
      *

@@ -30,6 +30,7 @@ export default class Force extends Behaviour {
      * @param {number} fz - the z axis force
      */
     reset(fx: number, fy: number, fz: number): void;
+    reset(life?: number, easing?: Function): void;
     /**
      * @desc The normalized force to exert on the particle in
      * @type {Vector3D}

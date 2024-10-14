@@ -20,7 +20,7 @@ export default class CrossZone extends Behaviour {
      * @param {function} easing - The behaviour's decaying trend
      * @param {boolean} [isEnabled=true] - Determines if the behaviour will be applied or not
      */
-    constructor(zone: typeof Zone, crossType?: string, life: number, easing: Function, isEnabled?: boolean);
+    constructor(zone: typeof Zone, crossType?: string, life?: number, easing?: Function, isEnabled?: boolean);
     /**
      * Resets the behaviour properties.
      *
@@ -29,7 +29,8 @@ export default class CrossZone extends Behaviour {
      * @param {number} life - The life of the particle
      * @param {function} easing - The behaviour's decaying trend
      */
-    reset(zone: typeof Zone, crossType?: string, life: number, easing: Function): void;
+    reset(zone: typeof Zone, crossType?: string, life?: number, easing?: Function): void;
+    reset(life?: number, easing?: Function): void;
     /**
      * @desc The zone used to apply to particles with this behaviour
      * @type {Zone}

@@ -44,6 +44,7 @@ export default class Rotate extends Behaviour {
      * @return void
      */
     reset(x: number, y: number, z: number, life: number, easing: Function): void;
+    reset(life?: number, easing?: Function): void;
     /**
      * @desc X axis rotation.
      * @type {number|Span}
@@ -76,5 +77,5 @@ export default class Rotate extends Behaviour {
     _setRotation(particleRotation: Vector3D, value: string | number): void;
 }
 import Behaviour from "./Behaviour";
-import { Vector3D } from "../math";
+import { Span, Vector3D } from "../math";
 //# sourceMappingURL=Rotate.d.ts.map

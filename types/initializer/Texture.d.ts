@@ -13,6 +13,7 @@ export default class Texture extends Initializer {
      * @return {BodySprite}
      */
     static fromJSON(json: object, THREE: object): BodySprite;
+    static fromJSON(json: object): Behaviour;
     /**
      * Constructs an Texture initializer.
      *
@@ -44,5 +45,7 @@ export default class Texture extends Initializer {
      */
     sprite: any;
 }
+import { Behaviour } from "../behaviour";
+import BodySprite from "./BodySprite";
 import Initializer from "./Initializer";
 //# sourceMappingURL=Texture.d.ts.map

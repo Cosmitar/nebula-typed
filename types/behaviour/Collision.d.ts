@@ -25,6 +25,7 @@ export default class Collision extends Behaviour {
      * @return void
      */
     reset(emitter: Emitter, useMass: boolean, onCollide: Function, life: number, easing: Function): void;
+    reset(life?: number, easing?: Function): void;
     emitter: Emitter;
     useMass: boolean;
     onCollide: Function;
@@ -39,7 +40,10 @@ export default class Collision extends Behaviour {
      */
     _getAverageMass(particleA: Particle, particleB: Particle): number;
     fromJSON(json: any): void;
+    fromJSON(json: Object): Behaviour;
 }
 import Behaviour from "./Behaviour";
 import { Vector3D } from "../math";
+import { Emitter } from "../emitter";
+import Particle from "../core/Particle";
 //# sourceMappingURL=Collision.d.ts.map

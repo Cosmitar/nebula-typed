@@ -15,7 +15,7 @@ export default class RandomDrift extends Behaviour {
      * @param {function} easing - The behaviour's decaying trend
      * @return void
      */
-    constructor(driftX: number, driftY: number, driftZ: number, delay?: number, life: number, easing: Function, isEnabled?: boolean);
+    constructor(driftX: number, driftY: number, driftZ: number, delay?: number, life?: number, easing?: Function, isEnabled?: boolean);
     /**
      * @desc Internal time used for calculating drift vs internal delay.
      * @type {number}
@@ -31,7 +31,8 @@ export default class RandomDrift extends Behaviour {
      * @param {number} life - The life of the particle
      * @param {function} easing - The behaviour's decaying trend
      */
-    reset(driftX: number, driftY: number, driftZ: number, delay?: number, life: number, easing: Function): void;
+    reset(driftX: number, driftY: number, driftZ: number, delay?: number, life?: number, easing?: Function): void;
+    reset(life?: number, easing?: Function): void;
     /**
      * @desc A Vector3D that stores the drift properties.
      * @type {Vector3D}
@@ -44,5 +45,5 @@ export default class RandomDrift extends Behaviour {
     delayPan: Span;
 }
 import Behaviour from "./Behaviour";
-import { Vector3D } from "../math";
+import { Span, Vector3D } from "../math";
 //# sourceMappingURL=RandomDrift.d.ts.map

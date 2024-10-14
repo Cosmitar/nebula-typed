@@ -23,12 +23,12 @@ export default class Emitter extends Particle {
      * @desc The current emit iteration.
      * @type {integer}
      */
-    currentEmitTime: integer;
+    currentEmitTime: number;
     /**
      * @desc The total number of times the emitter should emit particles.
      * @type {integer}
      */
-    totalEmitTimes: integer;
+    totalEmitTimes: number;
     /**
      * @desc The friction coefficient for all particle to emit by.
      * @type {number}
@@ -157,14 +157,14 @@ export default class Emitter extends Particle {
      * @param {array<Initializer>} initializers - an array of particle initializers
      * @return {Emitter}
      */
-    addInitializers(initializers: array<Initializer>): Emitter;
+    addInitializers(initializers: Initializer[]): Emitter;
     /**
      * Sets the emitter's particle initializers.
      *
      * @param {array<Initializer>} initializers - an array of particle initializers
      * @return {Emitter}
      */
-    setInitializers(initializers: array<Initializer>): Emitter;
+    setInitializers(initializers: Initializer[]): Emitter;
     /**
      * Removes an initializer from the emitter's initializers array.
      *
@@ -192,14 +192,14 @@ export default class Emitter extends Particle {
      * @param {array<Behaviour>} behaviours - an array of emitter behaviours
      * @return {Emitter}
      */
-    addBehaviours(behaviours: array<Behaviour>): Emitter;
+    addBehaviours(behaviours: Behaviour[]): Emitter;
     /**
      * Sets the emitter's behaviours.
      *
      * @param {array<Behaviour>} behaviours - an array of emitter behaviours
      * @return {Emitter}
      */
-    setBehaviours(behaviours: array<Behaviour>): Emitter;
+    setBehaviours(behaviours: Behaviour[]): Emitter;
     /**
      * Removes the behaviour from the emitter's behaviours array.
      *
@@ -226,14 +226,14 @@ export default class Emitter extends Particle {
      * @param {array<Behaviour>} behaviours - an array of emitter behaviours
      * @return {Emitter}
      */
-    addEmitterBehaviours(behaviours: array<Behaviour>): Emitter;
+    addEmitterBehaviours(behaviours: Behaviour[]): Emitter;
     /**
      * Sets the emitter's behaviours.
      *
      * @param {array<Behaviour>} behaviours - an array of emitter behaviours
      * @return {Emitter}
      */
-    setEmitterBehaviours(behaviours: array<Behaviour>): Emitter;
+    setEmitterBehaviours(behaviours: Behaviour[]): Emitter;
     /**
      * Removes the behaviour from the emitter's behaviours array.
      *
@@ -305,6 +305,9 @@ export default class Emitter extends Particle {
      */
     generate(time: number): void;
 }
+import Behaviour from "../behaviour/Behaviour";
 import Particle from "../core/Particle";
 import EventDispatcher from "../events";
+import Initializer from "../initializer/Initializer";
+import Rate from "../initializer/Rate";
 //# sourceMappingURL=Emitter.d.ts.map

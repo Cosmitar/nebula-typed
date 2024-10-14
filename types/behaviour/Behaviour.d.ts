@@ -1,3 +1,7 @@
+import Particle from "../core/Particle";
+import { Emitter } from "../emitter";
+import { Vector3D } from "../math";
+
 /**
  * The base behaviour class.
  * Behaviours manage a particle's behaviour after they have been emitted.
@@ -101,7 +105,7 @@ export default class Behaviour {
      * @param {integer} index - the target index
      * @return mixed
      */
-    applyBehaviour(target: Particle | Emitter, time: number, index: integer): void;
+    applyBehaviour(target: Particle | Emitter, time: number, index: number): void;
     /**
      * Change the target's properties according to specific behaviour logic.
      *

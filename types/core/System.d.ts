@@ -59,12 +59,12 @@ export default class System {
      * @desc The emitters in the particle system.
      * @type {array<Emitter>}
      */
-    emitters: array<Emitter>;
+    emitters: Emitter[];
     /**
      * @desc The renderers for the system.
      * @type {array<Renderer>}
      */
-    renderers: array<Renderer>;
+    renderers: BaseRenderer[];
     /**
      * @desc A pool used to manage the internal system cache of objects
      * @type {Pool}
@@ -88,14 +88,14 @@ export default class System {
      * @param {Renderer} renderer - The renderer to add
      * @return {System}
      */
-    addRenderer(renderer: Renderer): System;
+    addRenderer(renderer: BaseRenderer): System;
     /**
      * Removes a renderer from the System instance.
      *
      * @param {Renderer} renderer
      * @return {System}
      */
-    removeRenderer(renderer: Renderer): System;
+    removeRenderer(renderer: BaseRenderer): System;
     /**
      * Adds an emitter to the System instance.
      * Dispatches the EMITTER_ADDED event.
@@ -148,7 +148,7 @@ export default class System {
      *
      * @return {integer}
      */
-    getCount(): integer;
+    getCount(): number;
     /**
      * Destroys all emitters, renderers and the Nebula pool.
      * Ensures that this.update will not perform any operations while the system
@@ -161,4 +161,5 @@ export default class System {
 import Emitter from "../emitter/Emitter";
 import Pool from "./Pool";
 import EventDispatcher from "../events";
+import BaseRenderer from "../renderer/BaseRenderer";
 //# sourceMappingURL=System.d.ts.map

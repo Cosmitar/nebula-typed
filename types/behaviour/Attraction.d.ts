@@ -69,6 +69,7 @@ export default class Attraction extends Behaviour {
      * @return void
      */
     reset(targetPosition: Vector3D, force: number, radius: number, life: number, easing: Function): void;
+    reset(life?: number, easing?: Function): void;
 }
 import Behaviour from "./Behaviour";
 import { Vector3D } from "../math";

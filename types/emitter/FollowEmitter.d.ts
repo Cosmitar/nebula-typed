@@ -23,7 +23,7 @@ export default class FollowEmitter extends Emitter {
      * start emit particle
      * @method emit
      */
-    emit(): void;
+    emit(): Emitter;
     setCameraAndCanvas(camera: any, canvas: any): void;
     camera: any;
     canvas: any;

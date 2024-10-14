@@ -43,6 +43,7 @@ export default class Color extends Behaviour {
      */
     _same: boolean;
     reset(colorA: any, colorB: any, life: any, easing: any): void;
+    reset(life?: number, easing?: Function): void;
     colorA: import("../math").ColorSpan;
     colorB: import("../math").ColorSpan;
     initialize(particle: any): void;

@@ -11,10 +11,11 @@ export default class MeshZone extends Zone {
      * @param {THREE.Geometry} ThreeGeometry - the three geometry class
      * @return void
      */
-    constructor(bounds: THREE.Geometry | Mesh, scale: number, ThreeGeometry: THREE.Geometry);
+    constructor(bounds: BufferGeometry | Mesh, scale: number, ThreeGeometry: BufferGeometry);
     geometry: any;
     scale: number;
     getPosition(): import("..").Vector3D;
 }
+import { BufferGeometry, Mesh } from "three";
 import Zone from "./Zone";
 //# sourceMappingURL=MeshZone.d.ts.map

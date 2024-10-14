@@ -18,6 +18,7 @@ export default class Rate extends Initializer {
      * @return {Rate}
      */
     static fromJSON(json: object): Rate;
+    static fromJSON(json: object): Behaviour;
     /**
      * Constructs a Rate instance.
      *
@@ -62,4 +63,5 @@ export default class Rate extends Initializer {
 }
 import Initializer from "./Initializer";
 import { Span } from "../math";
+import { Behaviour } from "../behaviour";
 //# sourceMappingURL=Rate.d.ts.map

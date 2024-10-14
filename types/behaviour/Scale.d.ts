@@ -48,6 +48,7 @@ export default class Scale extends Behaviour {
      * @return void
      */
     reset(scaleA: number, scaleB: number | null, life: number, easing: Function): void;
+    reset(life?: number, easing?: Function): void;
     /**
      * @desc The starting scale.
      * @type {Span}
@@ -59,5 +60,7 @@ export default class Scale extends Behaviour {
      */
     scaleB: Span;
 }
+import { Span } from "../math";
 import Behaviour from "./Behaviour";
+import Spring from "./Spring";
 //# sourceMappingURL=Scale.d.ts.map

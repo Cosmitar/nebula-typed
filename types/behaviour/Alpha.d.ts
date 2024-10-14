@@ -62,6 +62,8 @@ export default class Alpha extends Behaviour {
      * @return void
      */
     reset(alphaA: number, alphaB: number | null, life: number, easing: Function): void;
+    reset(life?: number, easing?: Function): void;
 }
+import { Span } from "../math";
 import Behaviour from "./Behaviour";
 //# sourceMappingURL=Alpha.d.ts.map

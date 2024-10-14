@@ -1,3 +1,5 @@
+import { Emitter } from '../emitter';
+
 /**
  * @desc Default particle life
  * @type {number}
@@ -37,7 +39,7 @@ export const DEFAULT_BODY: object | null;
  * @desc Default particle parent
  * @type {?Emitter}
  */
-export const DEFAULT_PARENT: Emitter;
+export const DEFAULT_PARENT: typeof Emitter;
 /**
  * @desc Default particle mass
  * @type {number}
@@ -82,21 +84,21 @@ export const DEFAULT_SYSTEM_DELTA: number;
  * @desc The types of initializers supported by the System.fromJSON method.
  * @type {array<string>}
  */
-export const SUPPORTED_JSON_INITIALIZER_TYPES: array<string>;
+export const SUPPORTED_JSON_INITIALIZER_TYPES: string[];
 /**
  * @desc The types of behaviours supported by the System.fromJSON method.
  * @type {array<string>}
  */
-export const SUPPORTED_JSON_BEHAVIOUR_TYPES: array<string>;
+export const SUPPORTED_JSON_BEHAVIOUR_TYPES: string[];
 /**
  * @desc The types of renderers supported by the System.fromJSON method.
  * @type {array<string>}
  */
-export const SUPPORTED_JSON_RENDERER_TYPES: array<string>;
+export const SUPPORTED_JSON_RENDERER_TYPES: string[];
 /**
  * @desc The types of zones supported by the System.fromJSON method.
  * @type {array<string>}
  */
-export const SUPPORTED_JSON_ZONE_TYPES: array<string>;
-export { INITIALIZER_TYPES_THAT_REQUIRE_THREE } from "../initializer/types";
+export const SUPPORTED_JSON_ZONE_TYPES: string[];
+export { INITIALIZER_TYPES_THAT_REQUIRE_THREE } from '../initializer/types';
 //# sourceMappingURL=constants.d.ts.map

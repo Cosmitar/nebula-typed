@@ -10,7 +10,7 @@ export default class ArraySpan extends Span {
      * @param {mixed|array<mixed>} items - Items
      * @return void
      */
-    constructor(items: mixed | array<mixed>);
+    constructor(items: any[]);
     /**
      * @desc An array of colors
      * @type {array}
@@ -21,8 +21,8 @@ export default class ArraySpan extends Span {
      *
      * @return {mixed}
      */
-    getValue(): mixed;
+    getValue(): any;
 }
-export function createArraySpan(items: mixed): ArraySpan | null;
+export function createArraySpan(items: any): ArraySpan | null;
 import Span from "./Span";
 //# sourceMappingURL=ArraySpan.d.ts.map

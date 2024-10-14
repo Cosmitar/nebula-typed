@@ -25,7 +25,7 @@ export default class SphereZone extends Zone {
      * @return void
      */
     _cross(): void;
-    getPosition: {
+    getPosition(): {
         new (): {
             random: number;
         };

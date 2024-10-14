@@ -35,6 +35,7 @@ export default class Spring extends Behaviour {
      * @return void
      */
     reset(x: number, y: number, z: number, spring: number, friction: number): void;
+    reset(life?: number, easing?: Function): void;
     pos: Vector3D;
     spring: number;
     friction: number;

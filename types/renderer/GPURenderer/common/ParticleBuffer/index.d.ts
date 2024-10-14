@@ -1,3 +1,5 @@
+import { BufferGeometry, InterleavedBuffer } from "three";
+
 /**
  * Creates and provides performant buffers for mapping particle properties to geometry vertices.
  *
@@ -24,14 +26,14 @@ export default class ParticleBuffer {
      *
      * @return {ParticleBufferGeometry}
      */
-    createBufferGeometry(): ParticleBufferGeometry;
+    createBufferGeometry(): BufferGeometry;
     geometry: any;
     /**
      * Gets the publicly accessible interleaved buffer.
      *
      * @return {THREE.InterleavedBuffer} buffers - The interleaved buffer
      */
-    get buffer(): THREE.InterleavedBuffer;
+    get buffer(): InterleavedBuffer;
     get stride(): number;
 }
 //# sourceMappingURL=index.d.ts.map

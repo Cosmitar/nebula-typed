@@ -75,5 +75,6 @@ export default class Zone {
      */
     _cross(particle: any): void;
 }
+import { Particle } from "../core";
 import Vector3D from "../math/Vector3D";
 //# sourceMappingURL=Zone.d.ts.map

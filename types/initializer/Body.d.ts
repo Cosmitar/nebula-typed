@@ -13,6 +13,7 @@ export default class Body extends Initializer {
      * @return {Body}
      */
     static fromJSON(json: object): Body;
+    static fromJSON(json: object): Behaviour;
     /**
      * Constructs a Body initalizer instance.
      *
@@ -39,5 +40,7 @@ export default class Body extends Initializer {
      */
     h: number;
 }
+import { Behaviour } from "../behaviour";
+import { ArraySpan } from "../math";
 import Initializer from "./Initializer";
 //# sourceMappingURL=Body.d.ts.map

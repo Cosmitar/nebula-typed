@@ -19,6 +19,7 @@ export default class VectorVelocity extends Velocity {
         z: number;
         theta: number;
     }): VectorVelocity;
+    static fromJSON(json: object): Behaviour;
     /**
      * Constructs a VectorVelocity initializer.
      *
@@ -49,5 +50,6 @@ export default class VectorVelocity extends Velocity {
     _useV: boolean;
 }
 import Velocity from "./Velocity";
-import { Vector3D } from "../../math";
+import { Span, Vector3D } from "../../math";
+import { Behaviour } from "../../behaviour";
 //# sourceMappingURL=VectorVelocity.d.ts.map

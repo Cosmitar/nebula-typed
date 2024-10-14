@@ -22,7 +22,7 @@ export default class DesktopGPURenderer extends BaseRenderer {
     targetPool: Pool;
     uniqueList: UniqueList;
     particleBuffer: ParticleBuffer;
-    buffer: THREE.InterleavedBuffer;
+    buffer: InterleavedBuffer;
     stride: number;
     geometry: any;
     material: any;
@@ -113,8 +113,9 @@ export default class DesktopGPURenderer extends BaseRenderer {
     destroy(): void;
 }
 import BaseRenderer from "../../BaseRenderer";
-import { Pool } from "../../../core";
+import { Particle, Pool } from "../../../core";
 import { UniqueList } from "../common";
 import { ParticleBuffer } from "../common";
 import { TextureAtlas } from "../common";
+import { InterleavedBuffer } from "three";
 //# sourceMappingURL=index.d.ts.map

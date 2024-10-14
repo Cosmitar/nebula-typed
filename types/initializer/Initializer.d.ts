@@ -1,3 +1,7 @@
+import { Behaviour } from "../behaviour";
+import { Particle } from "../core";
+import { Emitter } from "../emitter";
+
 /**
  * The base Emitter / Particle property class.
  *
